@@ -8,4 +8,4 @@ function getWeekOfMonth(date) {
   return parseInt(prefixes[Math.floor(adjustedDate / 7)]) + 1;
 }
 
-console.log(getWeekOfMonth(new Date(2021, 05, 1)));
+console.log(getWeekOfMonth(new Date(2017, 10, 9)));

@@ -7,9 +7,10 @@
 // console.log(year);
 // console.log(months);
 
-let january2018 = new Date(2017, 11, 1);
+let start = new Date(2017, 11, 1);
 // let monthJanuary = january2018.getMonth();
-let march2019 = new Date(2018, 1, 1);
+let end = new Date(2018, 1, 1);
+// console.log(end);
 // let monthMarch = march2019.getMonth();
 
 let months = [
@@ -22,6 +23,7 @@ let months = [
   "July",
   "August",
   "September",
+  "October",
   "November",
   "December",
 ];
@@ -34,15 +36,17 @@ function monthsInterval(startMonth, endMonth) {
   if (yearsDifference !== 0) {
     for (let i = 0; i <= yearsDifference; i += 1) {
       if (startMonth.getMonth() !== 0 && i === 0) {
-        resMonths.push(...months.slice(startMonth.getMonth() - 1));
+        resMonths.push(...months.slice(startMonth.getMonth()));
       } else if (endMonth.getMonth() !== 0 && i === yearsDifference) {
-        resMonths.push(...months.slice(0, endMonth.getMonth() + 1));
+        resMonths.push(...months.slice(0, endMonth.getMonth()));
       } else {
         resMonths.push(...months);
       }
     }
+  } else {
+    resMonths.push(...months.slice(startMonth.getMonth(), endMonth.getMonth()));
   }
   return resMonths;
 }
 
-console.log(monthsInterval(january2018, march2019));
+console.log(monthsInterval(start, end));
