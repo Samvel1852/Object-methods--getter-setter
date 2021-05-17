@@ -7,9 +7,9 @@
 // console.log(year);
 // console.log(months);
 
-let january2018 = new Date(2018, 4, 1);
+let january2018 = new Date(2017, 11, 1);
 // let monthJanuary = january2018.getMonth();
-let march2019 = new Date(2020, 2, 1);
+let march2019 = new Date(2018, 1, 1);
 // let monthMarch = march2019.getMonth();
 
 let months = [
